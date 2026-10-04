@@ -1,5 +1,5 @@
-# walpaper
-~/.fehbg &
+# # walpaper
+# ~/.fehbg &
 
 # Color temperature adjustment based on time of day
 # 6 AM to 6 PM: 5000K (cooler/bluer light)

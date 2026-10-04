@@ -602,13 +602,10 @@ require('lazy').setup({
       --  See `:help lsp-config` for information about keys and how to configure
       ---@type table<string, vim.lsp.Config>
       local servers = {
-        -- clangd = {},
+        clangd = {},
         -- gopls = {},
         -- pyright = {},
-        -- rust_analyzer = {},
-        julials = {
-          root_markers = { 'Project.toml', 'JuliaProject.toml', '.git', '.' },
-        },
+        rust_analyzer = {},
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
         --    https://github.com/pmizio/typescript-tools.nvim
@@ -825,7 +822,7 @@ require('lazy').setup({
   --   end,
   -- },
 
-  -- { 'catppuccin/nvim', name = 'catppuccin', priority = 1000, config = function() vim.cmd.colorscheme 'catppuccin' end },
+  { 'catppuccin/nvim', name = 'catppuccin', priority = 1000, config = function() vim.cmd.colorscheme 'catppuccin' end },
   {
     'rebelot/kanagawa.nvim',
     priority = 1000,
@@ -835,7 +832,7 @@ require('lazy').setup({
     'miikanissi/modus-themes.nvim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'modus_operandi' -- or 'modus_operandi' for light
+      -- vim.cmd.colorscheme 'modus_vivendi' -- or 'modus_operandi' for light
     end,
   },
   -- Highlight todo, notes, etc in comments
@@ -891,7 +888,7 @@ require('lazy').setup({
     branch = 'main',
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter-intro`
     config = function()
-      local parsers = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc','fortran','typst' }
+      local parsers = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'fortran', 'typst' }
       require('nvim-treesitter').install(parsers)
       vim.api.nvim_create_autocmd('FileType', {
         callback = function(args)
