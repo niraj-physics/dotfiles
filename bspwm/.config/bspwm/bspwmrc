@@ -16,3 +16,6 @@ bspc rule -a 'feh' state=floating
 
 ~/.fehbg &
 pgrep -x picom > /dev/null || picom -b &
+
+# redshift (daemon mode, Chennai)
+pgrep -x redshift > /dev/null || redshift -l 13.08:80.27 -t 5000:4000 &
