@@ -41,4 +41,3 @@ esac
 
 # <<< juliaup initialize <<<
 
-. "$HOME/.cargo/env"
